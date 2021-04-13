@@ -18,9 +18,25 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="counter++">Add</button>
-      <button v-on:click="counter--">Remove</button>
+      <!-- use methods in event listeners -->
+      <button v-on:click="add(5)">Add</button>
+      <button v-on:click="reduce(5)">Remove</button>
       <p>Result: {{ counter }}</p>
+      <!-- best event listener for input type is the 'input' event
+      by not using parenthese you use the default event object -->
+
+      <!-- the $event allows you to string input variables along with other arguments -->
+      <input type="text" v-on:input="setName($event, 'testing')" v-on:keyup.enter="confirmInput">
+      <p>Your Name: {{name}}</p>
+
+      <!-- <form v-on:submit="submitForm">
+        <input type="text">
+        <button>Sign Up</button>
+      </form> -->
+      <form v-on:submit.prevent="submitForm">
+        <input type="text">
+        <button>Sign Up</button>
+      </form>
     </section>
   </body>
 </html>
