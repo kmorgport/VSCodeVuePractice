@@ -7,6 +7,9 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    resetInput(){
+      this.name = "";
+    },
     confirmInput(){
       this.confirmedName = this.name;
     },
