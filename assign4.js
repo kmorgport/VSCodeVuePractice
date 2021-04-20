@@ -19,7 +19,7 @@ const app = Vue.createApp({
                 visible: this.paragraphIsVisible,
                 hidden: !this.paragraphIsVisible
             }
-        }
+        },
     }
 })
 

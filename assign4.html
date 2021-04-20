@@ -22,7 +22,7 @@
       <input type="text" v-model="input"/>
       <!-- (available classes: "user1", "user2") -->
       <p :class="paraClasses">
-        Style me!
+        {{input}}
       </p>
       <button @click="toggleVisibility" >Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
